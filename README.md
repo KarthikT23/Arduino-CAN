@@ -27,26 +27,27 @@ b) Libraries such as “mcp2515_can.h”, “SPI.h” etc.
 # Circuit Diagram
 ![image](https://github.com/KarthikT23/Arduino-CAN/assets/119528503/7f766bb3-3f94-4d5e-910e-75777da4d762)
 
-﻿MCP2515 	                              Arduino Uno	 
+﻿MCP2515-----Arduino Uno	 
  
-Vcc 	             5V 	 
+Vcc-----5V 	 
 
-GND 	             GND 	 
+GND-----GND 	 
 
-CS 	               D10 	 
+CS-----D10 	 
 
-SO 	               D12 	 
+SO-----D12 	 
 
-SI 	               D11 	 
+SI-----D11 	 
 
-SCK 	             D13 	 
+SCK-----D13 	 
 
-INT (receiver) 	   D2 (receiver)	 
+INT(receiver)-----D2(receiver)	 
 
 Also connect CAN_H and CAN_L of transmitter MCP2515 to CAN_H and CAN_L of receiver MCP2515
 
 # Hardware Setup
-![image](https://github.com/KarthikT23/Arduino-CAN/assets/119528503/2467ee84-f530-456c-b017-907eed7a33c5)
+![image](https://github.com/KarthikT23/Arduino-CAN/assets/119528503/cc5d69af-6591-4587-afb4-304008e8d246)
+
 
 
 # Results
