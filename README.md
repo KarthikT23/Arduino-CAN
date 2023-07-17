@@ -57,6 +57,21 @@ Messages on Serial monitor indicating that message has been successfully transmi
 Received messages on Serial Monitor
 ![image](https://github.com/KarthikT23/Arduino-CAN/assets/119528503/0c4df13b-b114-47ab-8217-9ca51dae3f65)
 
+# References
+[1] "Arduino CAN Bus Module Tutorial" by Julian Ilett: https://www.youtube.com/watch?v=e6f3T8WJzgI
 
+[2] "Arduino CAN Bus Interface: What is it and How to Use it" by All About Circuits: https://www.allaboutcircuits.com/projects/arduino-can-bus-interface-what-is-it-and-how-to-use-it/
+
+[3] "CAN-BUS Shield V2" Wiki page by Seeed Studio: https://wiki.seeedstudio.com/CAN-BUS_Shield_V2/
+
+[4] "MCP2515 Datasheet" by Microchip Technology Inc.: https://ww1.microchip.com/downloads/en/DeviceDoc/20001801H.pdf
+
+[5] "CAN Bus Protocol Tutorial" by Copperhill Technologies: https://copperhilltech.com/blog/can-bus-protocol-tutorial/
+
+[6] https://www.tutorialspoint.com/can-bus-with-arduino
+
+[7] "Design and Implementation of CAN Bus Communication System Based on Arduino", by Yunhao Li, published in the 2nd International Conference on Computer Science and Network Technology.
+
+[8] "Implementation of a CAN Bus System Using Arduino", by James J. E. Hughes, published in the 2015 IEEE Global Humanitarian Technology Conference.
 
 
