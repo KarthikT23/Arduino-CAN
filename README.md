@@ -48,7 +48,21 @@ Also connect CAN_H and CAN_L of transmitter MCP2515 to CAN_H and CAN_L of receiv
 # Hardware Setup
 ![image](https://github.com/KarthikT23/Arduino-CAN/assets/119528503/cc5d69af-6591-4587-afb4-304008e8d246)
 
+# Transmitter Code Explanation:
+The code is for implementing CAN bus communication between two Arduino Uno boards using the MCP2515 module. The MCP2515 module is connected to the Arduino Uno through SPI communication using the mcp2515_can library.
+In the setup() function, the serial communication is initiated and the MCP2515 module is initialized with a baud rate of 500Kbps. A loop is added to keep retrying the initialization process until it is successful.
+In the loop() function, a message is sent using the CAN.sendMsgBuf() function with an ID of 0x00, a standard frame, a data length of 3, and a data buffer stmp. The stmp buffer is incremented in each iteration of the loop.
+Then, the CAN.readMsgBuf() function is called to receive any messages on the CAN bus. If there is a message, it is stored in the recvmsg buffer. The received message is then printed to the serial monitor.
+The loop is delayed by 1000 milliseconds before sending the next message. The process repeats continuously.
+In this specific code, the recvmsg buffer is checked for specific values and the corresponding character is printed to the serial monitor. If the value in the recvmsg buffer is 65, "A" is printed, if the value is 67, "C" is printed, and if the value is 75, "K received" is printed.
 
+# Receiver Code Explanation:
+This code demonstrates the use of the MCP2515 library to enable communication between two Arduino boards via a CAN bus. The code begins with the definition of the SPI chip select (CS) pin and the CAN interrupt pin. The MCP2515_CAN object is then created with the specified CS pin.
+The setup() function initializes the serial port and attaches an interrupt to the CAN interrupt pin. The CAN bus is then initialized with a baud rate of 500 kbps. The function waits until the initialization is successful before continuing.
+The loop() function first checks if a flag flagRecv has been set to 1, indicating that a message has been received. If a message has been received, the flag is cleared and the function iterates over all pending messages using CAN.checkReceive(). The CAN.readMsgBuf() function is then used to read the length and data of the message into the len and buf variables.
+The message is acknowledged using CAN.sendMsgBuf() with the ack message buffer. The message data is then printed to the serial monitor using a for loop.
+The interrupt service routine MCP2515_ISR() is used to set the flagRecv flag to 1 when a message is received. This ISR is called when a falling edge is detected on the CAN interrupt pin.
+Overall, the code demonstrates how to set up communication between two Arduino boards using a CAN bus and the MCP2515 library. The code reads messages from the bus and prints them to the serial monitor, and also sends a response message to acknowledge receipt of the original message.
 
 # Results
 Messages on Serial monitor indicating that message has been successfully transmitted and Acknowledgement has been received
